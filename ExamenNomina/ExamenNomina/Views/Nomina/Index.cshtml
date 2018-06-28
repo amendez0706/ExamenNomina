@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel panel-info">
+    <div class="panel-heading text-center"><strong>Reporte de nomina mensual detallado</strong></div>
+    <div id="mainContainer" class="panel-body">
+        <div>            
+                <fieldset>
+                    <legend>Filtros</legend>
+                    <div>
+                        <div class="inlineblock">
+                            <label for="txtAño">Año:</label>
+                            <input id="txtAño" type="text" maxlength="4" />
+                        </div>
+                        <div class="inlineblock">
+                            <label>Mes</label>
+                            <select id="ddlMes" class="cjComboBox"  tabindex="1">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="inlineblock">
+                            <label>Tipo</label>
+                            <select id="ddlTipo" class="cjComboBox" tabindex="1">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="inlineblock">
+                            <label>Rol</label>
+                            <select id="ddlRol" class="cjComboBox" tabindex="1">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <br />
+                    <input type="button" id="btnConsultar" class="btn btn-primary" value="Consultar" />                    
+                </fieldset>
+            
+        </div>
+        <div>
+            <div style="text-align:center;">
+                <h2>Nomina Mensual</h2>
+                <table id="TablaNomina" class="grid" style="margin:auto">
+                    <thead>
+                        <tr class="tr_header">
+                            <th>Empleado</th>
+                            <th>Nombre</th>
+                            <th>Rol</th>
+                            <th>Tipo</th>
+                            <th>Sueldo Mensual</th>
+                            <th>Bono por entrega</th>
+                            <th>Bono por hora</th>
+                            <th>Vales de despensa</th>
+                            <th>ISR Retenido</th>
+                            <th>ISR Adicional</th>
+                            <th>Total a pagar</th>                            
+                        </tr>
+                    </thead>
+                    <tbody></tbody>                    
+                </table>                
+            </div>
+        </div>
+              
+        <input type="button" id="btnLimpiar" class="btn btn-default" value="Limpiar" />
+    </div>
+</div>
+<script src="~/Scripts/Base/jquery-1.11.0.min.js"></script>
+<script src="~/Scripts/Base/toastr.min.js"></script>
+<script src="~/Scripts/Base/Plugins.js"></script>
+<script src="~/Scripts/Base/DateTimeFormat.js"></script>
+<script src="~/Scripts/Views/Nomina.js"></script>
+

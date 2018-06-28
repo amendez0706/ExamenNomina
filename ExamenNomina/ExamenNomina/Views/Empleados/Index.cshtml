@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel panel-info">
+    <div class="panel-heading text-center"><strong>Catalogo de empleados</strong></div>
+    <div id="mainContainer" class="panel-body">
+        <div>
+            <div>
+                <div class="inlineblock">
+                    <div id="ayudaEmpleado"></div>
+                </div>
+            </div>
+            <div>
+                <div class="inlineblock">
+                    <label for="txtNombre">Nombre:</label>
+                    <input id="txtNombre" type="text" disabled />
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="inlineblock">
+                <label>Rol de empleado</label>
+                <select id="ddlRolEmpleado" class="cjComboBox" disabled style="width:350px;" tabindex="1">
+                    <option></option>
+                </select>
+            </div>
+            <div class="inlineblock">
+                <label>Tipo de empleado</label>
+                <select id="ddlTipoEmpleado" class="cjComboBox" disabled style="width:350px;" tabindex="1">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <br />
+        <input type="button" id="btnNuevo" value="Nuevo" class="btn btn-success" />
+        <input type="button" id="btnGuardar" value="Guardar" class="btn btn-success" disabled />
+        <input type="button" id="btnEliminar" value="Eliminar" class="btn btn-danger" disabled />        
+        <input type="button" id="btnLimpiar" class="btn btn-default" value="Limpiar" />
+    </div>
+</div>
+<script src="~/Scripts/Base/jquery-1.11.0.min.js"></script>
+<script src="~/Scripts/Base/jquery-jtemplates.js"></script>
+<script src="~/Scripts/Base/jquery.HelpField-1.1.js"></script>
+<script src="~/Scripts/Base/toastr.min.js"></script>
+<script src="~/Scripts/Base/Plugins.js"></script>
+<script src="~/Scripts/Base/DateTimeFormat.js"></script>
+<script src="~/Scripts/Views/Empleados.js"></script>

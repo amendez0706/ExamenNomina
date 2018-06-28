@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Movimientos";
+}
+
+
+<div class="panel panel-info">
+    <div class="panel-heading text-center"><strong>Captura de Movimientos por Empleado</strong></div>
+    <div id="mainContainer" class="panel-body">
+        <div>
+            <div>
+                <div class="inlineblock">
+                    <div id="ayudaEmpleado"></div>
+                </div>
+            </div>
+            <div>
+                <div class="inlineblock">
+                    <label for="txtNombre">Nombre:</label>
+                    <input id="txtNombre" type="text" disabled />
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="inlineblock">
+                <label>Rol de empleado</label>
+                <select id="ddlRolEmpleado" class="cjComboBox" disabled style="width:350px;" tabindex="1">
+                    <option></option>
+                </select>
+            </div>
+            <div class="inlineblock">
+                <label>Tipo de empleado</label>
+                <select id="ddlTipoEmpleado" class="cjComboBox" disabled style="width:350px;" tabindex="1">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="inlineblock">
+                <label for="txtfecha">Fecha</label>
+                <input id="txtfecha" type="text" placeholder="dd/mm/aaaa" pattern="^[0-3][0-9]\/[0-1][0-9]\/[0-9]{4}$" maxlength="10" onKeyUp="this.value=formateafecha(this.value);" disabled />
+            </div>
+        </div>
+        <div>
+            <div class="inlineblock">
+                <label class="subtitulo"><input type="checkbox" id="chkCantidadEntregas" disabled >Cantidad Entregas</label>
+                <input id="txtCantidadEntregas" type="text" disabled />
+            </div>
+            <div class="inlineblock">
+                <label class="subtitulo"><input type="checkbox" id="chkCubrioTurno" disabled >Cubrio Turno</label>
+                <select id="ddlRolEmpleadoCubrioTurno" class="cjComboBox" disabled style="width:350px;" tabindex="1">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <br />
+        <input type="button" id="btnGuardar" value="Guardar" class="btn btn-success" disabled />
+        <input type="button" id="btnLimpiar" class="btn btn-default" value="Limpiar" />
+    </div>
+</div>
+<script src="~/Scripts/Base/jquery-1.11.0.min.js"></script>
+<script src="~/Scripts/Base/jquery-jtemplates.js"></script>
+<script src="~/Scripts/Base/jquery.HelpField-1.1.js"></script>
+<script src="~/Scripts/Base/toastr.min.js"></script>
+<script src="~/Scripts/Base/Plugins.js"></script>
+<script src="~/Scripts/Base/DateTimeFormat.js"></script>
+<script src="~/Scripts/Views/Movimientos.js"></script>
